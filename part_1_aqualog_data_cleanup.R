@@ -20,6 +20,9 @@ destination_folder<-"/Users/jdh/Library/CloudStorage/GoogleDrive-jakehosen@gmail
 
 
 your_directory<-"/directory/location/"
+
+setwd(paste(your_directory))
+
 your_directory_files<-list.dirs(paste(your_directory))
 
 
