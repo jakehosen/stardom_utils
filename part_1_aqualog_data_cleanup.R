@@ -18,15 +18,19 @@ cat("\nchoose destination folder")
 #destination_folder<-choose.dir()
 destination_folder<-"/Users/jdh/Library/CloudStorage/GoogleDrive-jakehosen@gmail.com/My Drive/spectroscopy/Sepulveda/corrected_data"
 
-x<-"yes"
-while(x=="yes"|x=="y"){
+
+your_directory<-"/directory/location/"
+your_directory_files<-list.dirs(paste(your_directory))
+
+
+for(i in your_directory_files){
 #choose folder where original aqualog data are stored.
 cat("\nchoose folder where original aqualog data are stored.")
 #main_folder<-choose.dir()
-main_folder <- dirname(file.choose())
+main_folder <- i
 #main_folder<-"/Volumes/GoogleDrive/My Drive/USDA Wetlands/Aqualog_Data/Raw Data/"
 
-cat("choose name for project")
+#cat("choose name for project")
 #proj_name<-readLines(n=1)
 proj_name<-gsub('.*/ ?(\\w+)', '\\1', main_folder)
 
